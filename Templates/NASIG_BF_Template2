@@ -138,10 +138,10 @@
     bf:media <http://id.loc.gov/vocabulary/mediaType/n> .
 
 <http://www.example.bibframe.org/Instance>
-    bf:carrier <http://id.loc.gov/vocabulary/carriers/nc>  
+    bf:carrier <http://id.loc.gov/vocabulary/carriers/nc>  .
 
 <http://www.example.bibframe.org/Instance>
-    bf:extent 
+    bf:extent     
         [ a bf:Extent ;
             rdfs:label "4 volumes" ] .
 
@@ -216,7 +216,7 @@
 
 
 <http://www.example.bibframe.org/Item>
-    bf:locator <http://www.example.bibframe.org/url .
+    bf:locator <http://www.example.bibframe.org/url> .
  
  
  

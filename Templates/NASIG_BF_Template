@@ -132,7 +132,7 @@
 
 
 <http://www.example.bibframe.org/Item>
-    bf:locator <http://www.example.bibframe.org/uri> .
+    bf:locator <http://www.example.bibframe.org/url> .
  
  
  
