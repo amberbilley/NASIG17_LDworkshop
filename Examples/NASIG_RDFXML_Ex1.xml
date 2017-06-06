@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF PUBLIC "-//DUBLIN CORE//DCMES DTD 2002/07/31//EN"
+    "http://dublincore.org/documents/2002/07/31/dcmes-xml/dcmes-xml-dtd.dtd">
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+         
+  <rdf:Description rdf:about="https://ejournals.lib.vt.edu/valib/index">
+    <dc:title>Virginia Libraries</dc:title>
+    <dc:publisher rdf:resource="http://id.loc.gov/authorities/names/n80023576">Virginia Library Association</dc:publisher>
+    <dc:identifier>ISSN 1086-9751</dc:identifier>
+    <dc:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85076502">Libraries</dc:subject>
+    <dc:subject rdf:resource="http://id.loc.gov/authorities/names/n79022909">Virginia</dc:subject>
+    <dc:format rdf:resource="http://id.loc.gov/vocabulary/marcgt/per">Periodical</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text">Text</dc:type>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.vermontlibraries.org/vlanews/">
+    <dc:title>VLA News</dc:title>
+    <dc:publisher rdf:resource="http://id.loc.gov/authorities/names/n85375613">Vermont Library Association</dc:publisher>
+    <dc:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85076502">Libraries</dc:subject>
+    <dc:subject rdf:resource="http://id.loc.gov/authorities/names/n79007067">Virginia</dc:subject>
+    <dc:format rdf:resource="http://id.loc.gov/vocabulary/marcgt/per">Periodical</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text">Text</dc:type>
+  </rdf:Description>
+
+</rdf:RDF>

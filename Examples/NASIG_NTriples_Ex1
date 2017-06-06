@@ -1,0 +1,13 @@
+<https://ejournals.lib.vt.edu/valib/index> <http://purl.org/dc/elements/1.1/title> "Virginia Libraries" .
+<https://ejournals.lib.vt.edu/valib/index> <http://purl.org/dc/elements/1.1/publisher> <http://id.loc.gov/authorities/names/n80023576> .
+<https://ejournals.lib.vt.edu/valib/index> <http://purl.org/dc/elements/1.1/identifier> "ISSN 1086-9751" .
+<https://ejournals.lib.vt.edu/valib/index> <http://purl.org/dc/elements/1.1/subject> <http://id.loc.gov/authorities/subjects/sh85076502> .
+<https://ejournals.lib.vt.edu/valib/index> <http://purl.org/dc/elements/1.1/subject> <http://id.loc.gov/authorities/names/n79022909> .
+<https://ejournals.lib.vt.edu/valib/index> <http://purl.org/dc/elements/1.1/format> <http://id.loc.gov/vocabulary/marcgt/per> .
+<https://ejournals.lib.vt.edu/valib/index> <http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/dcmitype/Text> .
+<http://www.vermontlibraries.org/vlanews/> <http://purl.org/dc/elements/1.1/title> "VLA News" .
+<http://www.vermontlibraries.org/vlanews/> <http://purl.org/dc/elements/1.1/publisher> <http://id.loc.gov/authorities/names/n85375613> .
+<http://www.vermontlibraries.org/vlanews/> <http://purl.org/dc/elements/1.1/subject> <http://id.loc.gov/authorities/subjects/sh85076502> .
+<http://www.vermontlibraries.org/vlanews/> <http://purl.org/dc/elements/1.1/subject> <http://id.loc.gov/authorities/names/n79007067> .
+<http://www.vermontlibraries.org/vlanews/> <http://purl.org/dc/elements/1.1/format> <http://id.loc.gov/vocabulary/marcgt/per> .
+<http://www.vermontlibraries.org/vlanews/> <http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/dcmitype/Text> .

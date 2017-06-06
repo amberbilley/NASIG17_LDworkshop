@@ -1,0 +1,90 @@
+[
+  {
+    "@id": "http://id.loc.gov/authorities/names/n79007067"
+  },
+  {
+    "@id": "http://id.loc.gov/authorities/names/n79022909"
+  },
+  {
+    "@id": "http://id.loc.gov/authorities/names/n80023576"
+  },
+  {
+    "@id": "http://id.loc.gov/authorities/names/n85375613"
+  },
+  {
+    "@id": "http://id.loc.gov/authorities/subjects/sh85076502"
+  },
+  {
+    "@id": "http://id.loc.gov/vocabulary/marcgt/per"
+  },
+  {
+    "@id": "http://purl.org/dc/dcmitype/Text"
+  },
+  {
+    "@id": "http://www.vermontlibraries.org/vlanews/",
+    "http://purl.org/dc/elements/1.1/title": [
+      {
+        "@value": "VLA News"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/publisher": [
+      {
+        "@id": "http://id.loc.gov/authorities/names/n85375613"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/subject": [
+      {
+        "@id": "http://id.loc.gov/authorities/subjects/sh85076502"
+      },
+      {
+        "@id": "http://id.loc.gov/authorities/names/n79007067"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/format": [
+      {
+        "@id": "http://id.loc.gov/vocabulary/marcgt/per"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/type": [
+      {
+        "@id": "http://purl.org/dc/dcmitype/Text"
+      }
+    ]
+  },
+  {
+    "@id": "https://ejournals.lib.vt.edu/valib/index",
+    "http://purl.org/dc/elements/1.1/title": [
+      {
+        "@value": "Virginia Libraries"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/publisher": [
+      {
+        "@id": "http://id.loc.gov/authorities/names/n80023576"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/identifier": [
+      {
+        "@value": "ISSN 1086-9751"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/subject": [
+      {
+        "@id": "http://id.loc.gov/authorities/subjects/sh85076502"
+      },
+      {
+        "@id": "http://id.loc.gov/authorities/names/n79022909"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/format": [
+      {
+        "@id": "http://id.loc.gov/vocabulary/marcgt/per"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/type": [
+      {
+        "@id": "http://purl.org/dc/dcmitype/Text"
+      }
+    ]
+  }
+]
