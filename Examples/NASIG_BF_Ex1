@@ -57,25 +57,17 @@
             rdf:value "1086-9751" ] ;
     bf:note 
         [ a bf:Note ;
-            rdfs:label "Vols. for 1901-1930. 1 v.; 1931-1940. 1 v. (includes issues published under later title)." ;
-            bf:noteType "index" ] ;
-    bf:note 
-        [ a bf:Note ;
-            rdfs:label "Description based on: Vol. 01 (2007); title from t.p." ;
+            rdfs:label "Description based on: Vol 45, No 1 (1999)" ;
             bf:noteType "description source" ] ;
     bf:note     
         [ a bf:Note ;
-            rdfs:label "Latest issue consulted: Vol. 04 (2010)." ;
+            rdfs:label "Latest issue consulted: Vol 61, No 1 (2015)." ;
             bf:noteType "description source" ] ;
-    bf:media <http://id.loc.gov/vocabulary/mediaType/n> ;
-    bf:carrier <http://id.loc.gov/vocabulary/carriers/nc>  ;
+    bf:media <http://id.loc.gov/vocabulary/mediaType/c> ;
+    bf:carrier <http://id.loc.gov/vocabulary/carriers/cr>  ;
     bf:extent 
         [ a bf:Extent ;
-            rdfs:label "4 volumes" ] ;
-    bf:note 
-        [ a bf:Note ;
-            rdfs:label "illustrations" ;
-            bf:noteType "Physical details" ] ;
+            rdfs:label "1 online resource" ] ;
     bf:otherPhysicalFormat <http://bibframe.example.org/11468948#Instance776-28> ;
     bf:instanceOf <http://bibframe.example.org/XXX#Work> ;
     bf:hasItem <http://www.example.bibframe.org/Item> .
