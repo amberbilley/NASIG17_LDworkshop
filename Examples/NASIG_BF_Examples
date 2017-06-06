@@ -1,0 +1,421 @@
+# BIBFRAME 2.0 serial cataloging template
+# (all from conversions made in the BIBFRAME Comparison Tool)
+ 
+ 
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix bflc: <http://id.loc.gov/ontologies/bflc/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zs: <http://docs.oasis-open.org/ns/search-ws/sruResponse> .
+ 
+################ 
+##  INSTANCE  ##
+################
+  
+# Type (rdf:type)
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    a bf:Instance .
+ 
+ 
+# Title
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:title 
+        [ a bf:Title ;
+            rdfs:label "The title." ] .
+ 
+ 
+# Title for Sorting (Local LC Practice)
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:title 
+        [ a bf:Title ;
+            rdfs:label "The title" ;
+            bflc:titleSortKey "title." ] .
+ 
+ 
+# Title Proper
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:title 
+        [ a bf:Title ;
+            rdfs:label "The title." ;
+            bf:mainTitle "The main title" ] .
+ 
+ 
+# Title Proper with Part Number and Name
+ 
+<http://bibframe.example.org/XXX#Instance>
+    bf:title 
+        [ a bf:Title ;
+            rdfs:label "The title. Series A, Containing the rest of the title." ;
+            bflc:titleSortKey "title. Series A, Containing the rest of the title." ;
+            bf:mainTitle "The main title" ;
+            bf:partName "Containing the rest of the title" ;
+            bf:partNumber "Series A" ] .
+ 
+ 
+# Title with Subtitle
+ 
+<http://bibframe.example.org/12382624#Instance>
+        [ a bf:Title ;
+            rdfs:label "The title : the subtitle." ;
+            bflc:titleSortKey "title : the subtitle." ;
+            bf:mainTitle "The main title" ;
+            bf:subtitle "the subtitle" ] .
+ 
+ 
+# Variant Title
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:title 
+        [ a bf:Title, bf:VariantTitle ;
+            rdfs:label "Variant title" ;
+            bflc:titleSortKey "Variant title" ;
+            bf:mainTitle "The main title" ] .
+        
+ 
+ 
+# Abbreviated Title
+ 
+<http://bibframe.example.org/XXX#Instance>
+    bf:title
+        [ a bf:AbbreviatedTitle, bf:Title, bf:VariantTitle ;
+            rdfs:label "Physician leadersh. j." ;
+            bflc:titleSortKey "Physician leadersh. j." ;
+            bf:mainTitle "Physician leadersh. j." ;
+            bf:source 
+                [ 
+                    a bf:Source ;
+                    rdf:value "issnkey" 
+                ]  
+        ] .
+
+
+# Key Title
+ 
+<http://bibframe.example.org/XXX#Instance>
+    bf:title
+        [ a bf:KeyTitle,
+                bf:Title,
+                bf:VariantTitle ;
+            rdfs:label "The title" ;
+            bflc:titleSortKey "title" ;
+            bf:mainTitle "The main title" ] .
+ 
+ 
+# Statement of Responsibility
+ 
+<http://bibframe.example.org/XXX#Instance>
+    bf:responsibilityStatement "edited by Nigel G. Foster, FRSA" .
+ 
+ 
+# Edition Statement
+ 
+<http://bibframe.example.org/XXX#Instance>
+    bf:editionStatement "2nd ed." .
+ 
+ 
+# Numbering of Serials
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:firstIssue "Vol. 187 (1896)" ;
+    bf:lastIssue "v. 233" .
+ 
+ 
+# Note on Numbering of First Issue or Part and Last Issue or Part
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:note 
+        [ a bf:Note ;
+            rdfs:label "Began with v. 01 (2007); ceased with v. 04 (2010)." ;
+            bf:noteType "Numbering" ] . 
+ 
+ 
+Publication Statement (transcribed)
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:provisionActivityStatement "Seoul : National Museum of Korea, 2007-©2010."
+ 
+ 
+# Publication Statement (divided into parts) 
+ 
+<http://bibframe.example.org/XXX#Instance>
+    bf:provisionActivity 
+        [ a bf:ProvisionActivity, bf:Publication ;
+            bf:agent 
+                [ a bf:Agent ;
+                    rdfs:label "National Museum of Korea" ] ;
+            bf:date "2007-©2010" ;
+            bf:place 
+                [ a bf:Place ;
+                    rdfs:label "Seoul" ] ] .
+ 
+ 
+# Publication Information (using URIs)
+ 
+<http://bibframe.example.org/XXX#Instance
+    bf:provisionActivity
+        [ a bf:ProvisionActivity, bf:Publication ;
+            bf:date "2007/2010"^^<http://id.loc.gov/datatypes/edtf> ;
+            bf:place <http://id.loc.gov/vocabulary/countries/ko> ] .
+ 
+ 
+# Copyright Date
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:copyrightDate "©2015" .
+ 
+ 
+# Series Statement
+ 
+<http://bibframe.example.org/17610810#Instance>
+    bf:seriesStatement "Blackstone's statutes series"
+ 
+ 
+Series Enumeration
+ 
+<http://bibframe.example.org/317269#Instance> 
+    bf:seriesEnumeration "65, v. 5", "v. 5" ;
+    bf:seriesStatement "Archetypal images in Greek religion", "Bollingen series"
+ 
+# [NB There is currently no way to link the right enumeration to the right statement; this is actually Bollingen series 65, v. 5]
+# [NB maybe with bf:part?]
+
+<http://bibframe.example.org/XXX#Instance> 
+    a bf:Instance ;
+    bf:part :Part1, :Part2 .
+
+ :Part1   
+    bf:seriesEnumeration "65, v. 5"
+    bf:seriesStatement "Archetypal images in Greek religion" .
+
+:Part2
+    bf:seriesEnumeration "v. 5" ;
+    bf:seriesStatement "Bollingen series" .
+ 
+# Mode of Issuance
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:issuance <http://id.loc.gov/vocabulary/issuance/serl> .
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:genreForm <http://id.loc.gov/vocabulary/marcgt/per> .
+ 
+ 
+# Frequency
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:frequency 
+        [ a bf:Frequency ;
+            rdfs:label "Annual" ],
+        <http://id.loc.gov/vocabulary/frequencies/ann> .
+ 
+ 
+# Regularity
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:frequency 
+        [ a bf:Frequency ;
+            rdfs:label "regular" ] .
+ 
+ 
+# Identifier for Manifestation: ISSN
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:identifiedBy
+        [ a bf:Issn ;
+            rdf:value "2005-1115" ] .
+ 
+ 
+# Identifier for Manifestation: LCCN
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:identifiedBy
+        [ a bf:Lccn ;
+            rdf:value "2008200843" ] .
+ 
+ 
+# Note on Manifestation
+ 
+<http://bibframe.example.org/11315714#Instance>
+    bf:note 
+        [ a bf:Note ;
+            rdfs:label "Vols. for 1901-1930. 1 v.; 1931-1940. 1 v. (includes issues published under later title)." ;
+            bf:noteType "index" ]
+ 
+ 
+# Note on Issue, Part, or Iteration Used as the Basis for Identification of Manifestation
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:note 
+        [ a bf:Note ;
+            rdfs:label "Description based on: Vol. 01 (2007); title from t.p." ;
+            bf:noteType "description source" ] ;
+        [ a bf:Note ;
+            rdfs:label "Latest issue consulted: Vol. 04 (2010)." ;
+            bf:noteType "description source" ] .
+ 
+ 
+# Media
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:media <http://id.loc.gov/vocabulary/mediaType/n> .
+ 
+ 
+# Carrier
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:carrier <http://id.loc.gov/vocabulary/carriers/nc>  .
+ 
+ 
+# Extent
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:extent 
+        [ a bf:Extent ;
+            rdfs:label "4 volumes" ] .
+ 
+ 
+# Illustrations
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:note 
+        [ a bf:Note ;
+            rdfs:label "illustrations" ;
+            bf:noteType "Physical details" ] .
+ 
+    # [NB Illustrative Content is expression-level but 300 $b is being mapped to the Instance in conversion]
+ 
+ 
+# Dimensions
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:dimensions "30 cm" .
+ 
+ 
+# URL (Item level description)
+
+<http://bibframe.example.org/XXX#Instance> 
+    bf:hasItem <http://bibframe.example.org/XXX#Item> .
+
+<http://bibframe.example.org/XXX#Item>
+    bf:locator <URI> .
+    
+ 
+# Relationships: among instances
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:otherPhysicalFormat <http://bibframe.example.org/XXX#Instance2> . 
+ 
+ 
+# Relationships: instance to work
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:instanceOf <http://bibframe.example.org/XXX#Work> .
+ 
+ 
+# Relationships: instance to item
+ 
+<http://bibframe.example.org/XXX#Instance> 
+    bf:hasItem <http://bibframe.example.org/XXX#Item2> .
+ 
+ 
+############
+##  WORK  ##
+############
+ 
+# Type (rdf:type)
+ 
+<http://bibframe.example.org/XXX#Work> 
+    a bf:Text, bf:Work .
+ 
+ 
+# Title
+ 
+<http://bibframe.example.org/XXX#Work> 
+    bf:title 
+        [ a bf:Title ;
+            rdfs:label "The title." ;
+            bflc:titleSortKey "title." ;
+            bf:mainTitle "The main title" ] .
+ 
+ 
+# Content
+ 
+<http://bibframe.example.org/XXX#Work> 
+    bf:content <http://id.loc.gov/vocabulary/contentType/txt> .
+ 
+ 
+# Language of Expression
+ 
+<http://bibframe.example.org/XXX#Work>
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> .
+ 
+ 
+# Relationships: work to instance
+ 
+<http://bibframe.example.org/XXX#Work> 
+    bf:hasInstance  <http://bibframe.example.org/XXX#Instance>,
+                    <http://bibframe.example.org/XXX#Instance2> .
+ 
+ 
+# Relationships: among works
+ 
+<http://bibframe.example.org/17610810#Work> 
+    bf:continues <http://bibframe.example.org/XXX#Work2> .
+ 
+<http://bibframe.example.org/XXX#Work> 
+    bf:continuedBy <http://bibframe.example.org/XXX#Work3> .
+ 
+<http://bibframe.example.org/17610810#Work
+    bf:hasSeries <http://bibframe.example.org/17610810#Work4> .
+ 
+ 
+# Contributors
+ 
+<http://bibframe.example.org/XXX#Work>
+    bf:contribution 
+        [ a bf:Contribution ;
+            bf:agent <http://id.loc.gov/authorities/names/n81039362> ;
+            bf:role <http://id.loc.gov/vocabulary/relators/ctb> ] .
+ 
+ 
+# Subject
+ 
+<http://bibframe.example.org/XXX#Work>
+    bf:subject 
+        <http://bibframe.example.org/XXX#Topic650-28>,
+        <http://bibframe.example.org/XXX#Topic650-30>,
+        <http://bibframe.example.org/XXX#Topic650-31> .
+
+# Why not use LCSH? 
+ 
+ 
+# Geographic Coverage
+ 
+<http://bibframe.example.org/XXX#Work>
+    bf:geographicCoverage <http://id.loc.gov/vocabulary/geographicAreas/a-kr> .
+ 
+ 
+# Genre/Form
+ 
+<http://bibframe.example.org/XXX#Work>
+    bf:genreForm <http://bibframe.example.org/XXX#GenreForm> .
+ 
+ 
+Identifier for Work: ISSN-L
+ 
+<http://bibframe.example.org/XXX#Work>
+    bf:identifiedBy 
+        [ a bf:IssnL ;
+            rdfs:value "1234-1231" ] .
+ 
+ 
+ 
+ 
+ 
