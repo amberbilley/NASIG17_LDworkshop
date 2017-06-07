@@ -15,11 +15,11 @@
             bflc:titleSortKey "title." ;
             bf:mainTitle "The main title" ;
             bf:subtitle "the subtitle" ;
-            bf:partName "Containing the rest of the title" ;
+            bf:partName "Part name" ;
             bf:partNumber "Series A" ] ;
     bf:title 
         [ a bf:Title, bf:VariantTitle ;
-            rdfs:label "Variant title" ;
+            rdfs:label "The variant title" ;
             bflc:titleSortKey "Variant title" ;
             bf:mainTitle "The main title" ] ;
     bf:title
@@ -54,13 +54,14 @@
         ] ;
     bf:provisionActivity
         [ a bf:ProvisionActivity, bf:Publication ;
+            bf:agent <http://id.loc.gov/authorities/names/.....> ;
             bf:date "2007/2010"^^<http://id.loc.gov/datatypes/edtf> ;
             bf:place <http://id.loc.gov/vocabulary/countries/ko> ] ;
     bf:copyrightDate "©2015" ;
     bf:seriesStatement "Series statement" ;
 
     bf:seriesEnumeration "65, v. 5", "v. 5" ;
-    bf:seriesStatement "Series statement A", "Series Btatement B" ;
+    bf:seriesStatement "Series statement A", "Series Statement B" ;
 
     bf:issuance <http://id.loc.gov/vocabulary/issuance/serl> ;
     bf:genreForm <http://id.loc.gov/vocabulary/marcgt/per> ;
