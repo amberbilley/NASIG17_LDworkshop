@@ -17,13 +17,13 @@
             bflc:titleSortKey "title." ;
             bf:mainTitle "The main title" ;
             bf:subtitle "the subtitle" ;
-            bf:partName "Containing the rest of the title" ;
+            bf:partName "Part name" ;
             bf:partNumber "Series A" ]  .
 
 <http://www.example.bibframe.org/Instance>
     bf:title 
         [ a bf:Title, bf:VariantTitle ;
-            rdfs:label "Variant title" ;
+            rdfs:label "The variant title" ;
             bflc:titleSortKey "Variant title" ;
             bf:mainTitle "The main title" ] .
 
@@ -76,6 +76,7 @@
 <http://www.example.bibframe.org/Instance>
     bf:provisionActivity
         [ a bf:ProvisionActivity, bf:Publication ;
+            bf:agent <http://id.loc.gov/authorities/names/.....> ;
             bf:date "2007/2010"^^<http://id.loc.gov/datatypes/edtf> ;
             bf:place <http://id.loc.gov/vocabulary/countries/ko> ] .
 
