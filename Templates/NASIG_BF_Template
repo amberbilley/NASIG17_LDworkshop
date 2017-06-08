@@ -5,11 +5,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix zs: <http://docs.oasis-open.org/ns/search-ws/sruResponse> . 
-   
-<http://www.example.bibframe.org/Instance> 
+@prefix zs: <http://docs.oasis-open.org/ns/search-ws/sruResponse> .
+
+<http://www.example.bibframe.org/Instance>
     a bf:Instance ;
-    bf:title 
+    bf:title
         [ a bf:Title ;
             rdfs:label "The title." ;
             bflc:titleSortKey "title." ;
@@ -17,7 +17,7 @@
             bf:subtitle "the subtitle" ;
             bf:partName "Part name" ;
             bf:partNumber "Series A" ] ;
-    bf:title 
+    bf:title
         [ a bf:Title, bf:VariantTitle ;
             rdfs:label "The variant title" ;
             bflc:titleSortKey "Variant title" ;
@@ -27,34 +27,34 @@
             rdfs:label "Physician leadersh. j." ;
             bflc:titleSortKey "Physician leadersh. j." ;
             bf:mainTitle "Physician leadersh. j." ;
-            bf:source 
-                [ 
+            bf:source
+                [
                     a bf:Source ;
-                    rdf:value "issnkey" 
-                ]  
+                    rdf:value "issnkey"
+                ]
         ] ;
     bf:responsibilityStatement "edited by Nigel G. Foster, FRSA" ;
     bf:editionStatement "2nd ed." ;
     bf:firstIssue "Vol. 187 (1896)" ;
-    bf:lastIssue "v. 233" ; 
-    bf:note 
+    bf:lastIssue "v. 233" ;
+    bf:note
         [ a bf:Note ;
             rdfs:label "Began with v. ; ceased with v. " ;
             bf:noteType "Numbering" ] ;
     bf:provisionActivityStatement "Place : Publisher, YYYY-YYYY." ;
-    bf:provisionActivity 
+    bf:provisionActivity
         [ a bf:ProvisionActivity, bf:Publication ;
-            bf:agent 
+            bf:agent
                 [ a bf:Agent ;
                     rdfs:label "Publisher" ] ;
             bf:date "2007-©2010" ;
-            bf:place 
+            bf:place
                 [ a bf:Place ;
-                    rdfs:label "Place" ] 
+                    rdfs:label "Place" ]
         ] ;
     bf:provisionActivity
         [ a bf:ProvisionActivity, bf:Publication ;
-            bf:agent <http://id.loc.gov/authorities/names/.....> ;
+            bf:agent <http://id.loc.gov/authorities/names/XXX> ;
             bf:date "2007/2010"^^<http://id.loc.gov/datatypes/edtf> ;
             bf:place <http://id.loc.gov/vocabulary/countries/ko> ] ;
     bf:copyrightDate "©2015" ;
@@ -65,11 +65,11 @@
 
     bf:issuance <http://id.loc.gov/vocabulary/issuance/serl> ;
     bf:genreForm <http://id.loc.gov/vocabulary/marcgt/per> ;
-    bf:frequency 
+    bf:frequency
         [ a bf:Frequency ;
             rdfs:label "Annual" ],
         <http://id.loc.gov/vocabulary/frequencies/ann> ;
-    bf:frequency 
+    bf:frequency
         [ a bf:Frequency ;
             rdfs:label "regular" ] ;
     bf:identifiedBy
@@ -78,24 +78,24 @@
     bf:identifiedBy
         [ a bf:Lccn ;
             rdf:value "2008200843" ] ;
-    bf:note 
+    bf:note
         [ a bf:Note ;
             rdfs:label "Vols. for 1901-1930. 1 v.; 1931-1940. 1 v. (includes issues published under later title)." ;
             bf:noteType "index" ] ;
-    bf:note 
+    bf:note
         [ a bf:Note ;
             rdfs:label "Description based on: Vol. 01 (2007); title from t.p." ;
             bf:noteType "description source" ] ;
-    bf:note     
+    bf:note
         [ a bf:Note ;
             rdfs:label "Latest issue consulted: Vol. 04 (2010)." ;
             bf:noteType "description source" ] ;
     bf:media <http://id.loc.gov/vocabulary/mediaType/n> ;
     bf:carrier <http://id.loc.gov/vocabulary/carriers/nc>  ;
-    bf:extent 
+    bf:extent
         [ a bf:Extent ;
             rdfs:label "4 volumes" ] ;
-    bf:note 
+    bf:note
         [ a bf:Note ;
             rdfs:label "illustrations" ;
             bf:noteType "Physical details" ] ;
@@ -103,10 +103,10 @@
     bf:otherPhysicalFormat <http://bibframe.example.org/XXX#Instance2> ;
     bf:instanceOf <http://bibframe.example.org/XXX#Work> ;
     bf:hasItem <http://www.example.bibframe.org/Item> .
- 
+
 <http://www.example.bibframe.org/Work>
     a bf:Text, bf:Work ;
-    bf:title 
+    bf:title
         [ a bf:Title ;
             rdfs:label "The title." ;
             bflc:titleSortKey "title." ;
@@ -117,25 +117,20 @@
     bf:continues <http://bibframe.example.org/XXX#Work2> ;
     bf:continuedBy <http://bibframe.example.org/XXX#Work3> ;
     bf:hasSeries <http://bibframe.example.org/17610810#Work4> ;
-    bf:contribution 
+    bf:contribution
         [ a bf:Contribution ;
             bf:agent <http://id.loc.gov/authorities/names/n81039362> ;
             bf:role <http://id.loc.gov/vocabulary/relators/ctb> ] ;
-    bf:subject 
+    bf:subject
         <http://id.loc.gov/authorities/subjects/sh85138961>,
         <http://id.loc.gov/authorities/subjects/sh85135696>,
         <http://id.loc.gov/authorities/subjects/sh85004598> ;
     bf:geographicCoverage <http://id.loc.gov/vocabulary/geographicAreas/a-kr> ;
     bf:genreForm <http://bibframe.example.org/XXX#GenreForm> ;
-    bf:identifiedBy 
+    bf:identifiedBy
         [ a bf:IssnL ;
             rdfs:value "1234-1231" ] .
 
 
 <http://www.example.bibframe.org/Item>
     bf:locator <http://www.example.bibframe.org/url> .
- 
- 
- 
- 
- 
